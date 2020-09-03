@@ -18,13 +18,13 @@ const tests = {
     exampleTest: () => {
         const actualValue = unitUnderTest();
 
-        assertTrue("expected value", actualValue, tests.exampleTest.name);
+        assertEqual("expected value", actualValue, tests.exampleTest.name);
     }
 };
 
 
 
-function assertTrue(expected, actual, testName) {
+function assertEqual(expected, actual, testName) {
     testsRun++;
     const comparableExpected = JSON.stringify(expected);
     const comparableActual = JSON.stringify(actual);
