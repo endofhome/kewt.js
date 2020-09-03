@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 let testsRun = 0;
 let testsPassed = 0;
 let testsFailed = 0;
