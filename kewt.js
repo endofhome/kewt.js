@@ -49,16 +49,18 @@ function log(msg) {
     }
 }
 
-function logGreen(msg) {
-    process.stdout.write(`${colours.green}`);
+function logColour(msg, colour) {
+    process.stdout.write(`${colour}`);
     log(msg);
-    process.stdout.write(`${colours.reset}`);
+    process.stdout.write(`${colour}`);
+}
+
+function logGreen(msg) {
+    logColour(msg, colours.green);
 }
 
 function logRed(msg) {
-    process.stdout.write(`${colours.red}`);
-    log(msg);
-    process.stdout.write(`${colours.reset}`);
+    logColour(msg, colours.red);
 }
 
 function reportFinal() {
