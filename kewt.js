@@ -2,12 +2,6 @@ let testsRun = 0;
 let testsPassed = 0;
 let testsFailed = 0;
 
-colours = {
-    red: "\u001B[31m",
-    green: "\u001B[32m",
-    reset: "\u001B[0m"
-};
-
 // This is the function you want to test.
 function unitUnderTest() {
     return "actual value";
@@ -39,6 +33,12 @@ function assertEqual(expected, actual, testName) {
     }
 }
 
+colours = {
+    red: "\u001B[31m",
+    green: "\u001B[32m",
+    reset: "\u001B[0m"
+};
+
 function log(msg) {
     if (msg !== undefined) {
         console.log(msg);
@@ -66,6 +66,7 @@ function reportFinal() {
     if (testsFailed > 0) { logRed(`${testsFailed} tests failed`); }
 }
 
+// run the tests!
 Object.getOwnPropertyNames(tests).forEach(test => tests[test]());
 reportFinal();
 
