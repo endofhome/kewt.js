@@ -67,7 +67,7 @@ function reportFinal() {
     log();
     if (testsRun !== 0) { log(`${testsRun} tests run`); } else { log("No tests found"); }
     if (testsPassed > 0) { logGreen(`${testsPassed} tests passed`); }
-    if (testsFailed > 0) { logRed(`${testsFailed} tests failed`); }
+    if (testsFailed > 0) { logRed(`${testsFailed} tests failed`); process.exit(1); }
 }
 
 // run the tests!
