@@ -22,8 +22,6 @@ const tests = {
     }
 };
 
-
-
 function assertEqual(expected, actual, testName) {
     testsRun++;
     const comparableExpected = JSON.stringify(expected);
@@ -48,11 +46,13 @@ function log(msg) {
         console.log();
     }
 }
+
 function logGreen(msg) {
     process.stdout.write(`${colours.green}`);
     log(msg);
     process.stdout.write(`${colours.reset}`);
 }
+
 function logRed(msg) {
     process.stdout.write(`${colours.red}`);
     log(msg);
