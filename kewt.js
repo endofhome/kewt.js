@@ -52,7 +52,7 @@ function log(msg) {
 function logColour(msg, colour) {
     process.stdout.write(`${colour}`);
     log(msg);
-    process.stdout.write(`${colour}`);
+    process.stdout.write(`${colours.reset}`);
 }
 
 function logGreen(msg) {
