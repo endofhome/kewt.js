@@ -63,7 +63,7 @@ function logRed(msg) {
     logColour(msg, colours.red);
 }
 
-function reportFinal() {
+function summary() {
     log();
     if (testsRun !== 0) { log(`${testsRun} tests run`); } else { log("No tests found"); }
     if (testsPassed > 0) { logGreen(`${testsPassed} tests passed`); }
@@ -72,5 +72,5 @@ function reportFinal() {
 
 // run the tests!
 Object.getOwnPropertyNames(tests).forEach(test => tests[test]());
-reportFinal();
+summary();
 
